@@ -1,0 +1,111 @@
+Git init
+	- Se le dice a git que se va a empezar a trabajar con git
+
+Git checkout -- <file>
+	- Descartar cambios
+	- Ejemplo:
+		
+
+Git add <file>
+
+	- Se pasan los archivos del workindirectory al staging area
+Git status
+
+	- En que estado se encuentran los archivos (workindirectory , staging area)
+
+Git commit
+
+	- Se pasan los archivos del stagingarea al repositorio (Como una primera foto)
+	
+Git push
+
+	- Subir a un repositorio remoto
+Git pull
+
+	- Te trae los cambios de otros desarrolladores
+Git clone
+
+	- Te realiza la copia del servidor central
+
+Git diff
+
+	- Ver las diferencia del(los) archivos
+
+
+GIT revert
+
+git branch [agregar una rama]
+git checkout <<rama>>
+
+
+Git log
+	- git log -oneline
+	- Git log --oneline --decorate
+	- Git log --oneline --graph
+	- Git log --oneline --decorate --graph
+
+Git reset
+	Git reset --soft
+	Git reset --hard
+
+
+Git revert
+
+
+ATAJOS
+git config
+	- git config --global alias.lodag 'log --oneline --decorate --all -graph' //agregar un alias
+	- Git config --global --get-regexp <<alias>> //ver los alias creados
+	- Git config --global --unset <<nombre_alias>>
+
+RAMAS
+
+Git branch //Muestra las ramas creadas
+	- Git branch <<nombre_rama>>
+	- Git checkout <<nombre_rama>>
+		○ Git checkout -b <<nombre_rama>>  //se cambia y crea la rama
+	- Git branch -m <<nombre_antiguo_rama>> <<nombre_nuevo> //cambia el nombre de la rama
+	- Git branch -d <<nombre_rama>> //Eliminar ramas
+	
+Git merge <<nombre_rama>> //unir ramas
+
+
+
+git init
+git commit -m "first commit"
+git remote set-url origin https://github.com/ingivansalcedo/h_duruelo.git
+git push -u origin main
+
+
+
+git diff (ver las diferencias)
+git branch [agregar una rama]
+git checkout <<rama>>
+git log --oneline --decorate --all --graph
+
+git config --list (ver todas la configuracion de git)
+
+git branch -a //ver las ramas master, locales y externas
+
+
+
+1) TRabajar con GIT
+	git checkout master
+	git pull origin master
+	git branch otrafeature
+	git checkout otrafeature
+	<<Modificar el codigo>>
+	git add -A //Agregar los archivos al staging
+	git commit -> "Algun comentario"
+	git push origin otrafeature
+	git checkout master
+	git branch --merged /Para revisar si nuestra banch está unida
+	git merge otrafeature
+	git push origin master
+
+	
+	
+Quitar las ramas
+   - git push origin --delete <<minuevafeature>> //Borrar del repositorio externo
+   - git branch -d <<ninuevafeature>> //borrar del repositorio local
+
